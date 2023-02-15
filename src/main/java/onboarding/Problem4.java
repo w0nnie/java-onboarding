@@ -13,6 +13,10 @@ public class Problem4 {
         CharValue(int value) {
             this.value = value;
         }
+
+        public int getValue() {
+            return value;
+        }
     }
     public static String solution(String word) {
         String answer = "";
@@ -33,10 +37,10 @@ public class Problem4 {
     }
 
     private static char getNewLowerCaseValue(char value) {
-        return (char) (CharValue.VALUE_LOWER_A.value + CharValue.VALUE_LOWER_Z.value - value);
+        return (char) (CharValue.VALUE_LOWER_A.getValue() + CharValue.VALUE_LOWER_Z.getValue() - value);
     }
 
     private static char getNewUpperCaseValue(char value) {
-        return (char) (CharValue.VALUE_UPPER_A.value + CharValue.VALUE_UPPER_Z.value - value);
+        return (char) (CharValue.VALUE_UPPER_A.getValue() + CharValue.VALUE_UPPER_Z.getValue() - value);
     }
 }
